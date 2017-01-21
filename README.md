@@ -13,6 +13,7 @@ import (
 func main() {
 	hubsocket.Handle("connect", func(ws *websocket.Conn, body string) {
 		fmt.Printf("%d clients\n", hubsocket.Clients())
+		hubsocket.Broadcast("connections", hubsocket.Clients())
 	})
 	http.Handle("/", hubsocket.Handler())
 	http.ListenAndServe(":8080", nil)
