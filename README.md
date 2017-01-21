@@ -5,7 +5,7 @@ package main
 
 import (
 	"fmt"
-	"git.192k.pw/bake/gopartd/hubsocket"
+	"git.192k.pw/bake/hubsocket"
 	"golang.org/x/net/websocket"
 	"net/http"
 )
